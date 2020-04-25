@@ -14,7 +14,7 @@ let showingWinScreen = false;
 
 let paddle1Y = 250;
 let paddle2Y = 250;
-const PADDLE_HEIGHT = 140;
+const PADDLE_HEIGHT = 100;
 const PADDLE_THICKNESS = 10;
 
 
