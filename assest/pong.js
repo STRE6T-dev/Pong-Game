@@ -3,8 +3,8 @@ let canvas;
 let ctx;
 let ballX = 50;
 let ballY = 50;
-let ballSpeedX = 20;
-let ballSpeedY = 20;
+let ballSpeedX = 12;
+let ballSpeedY = 12;
 
 let playerScore1 = 0;
 let  computerScore = 0;
@@ -52,7 +52,7 @@ window.onload = function()
     ctx = canvas.getContext('2d');
 
     // Moves Every 30 Fps
-    let framsPerSecond = 40;
+    let framsPerSecond = 30;
     setInterval(function(){
         moveEverything();
         drawEverthing();
@@ -84,14 +84,13 @@ function ballReset()
 function computerMovement()
     {
         let paddle2YCenter = paddle2Y + (PADDLE_HEIGHT/2);
-        if(paddle2YCenter < ballY -15)
+        if(paddle2YCenter < ballY -45)
         {
-            paddle2Y += 10;
-        }else if(paddle2Y > ballY -15)
+            paddle2Y += 30;
+        }else if(paddle2Y > ballY -45)
         {
-            paddle2Y -= 10;
+            paddle2Y -= 30;
         }
-
     }
 
 
@@ -111,7 +110,7 @@ function moveEverything()
             ballSpeedX = -ballSpeedX;
             
             let deltaY = ballY -(paddle1Y+PADDLE_HEIGHT/2);
-            ballSpeedY = deltaY * 0.6;
+            ballSpeedY = deltaY * 0.50;
         } else 
         {
             computerScore++;	
@@ -125,7 +124,7 @@ function moveEverything()
         {
             ballSpeedX = -ballSpeedX;
             let deltaY = ballY -(paddle2Y+PADDLE_HEIGHT/2);
-            ballSpeedY = deltaY * 0.6;
+            ballSpeedY = deltaY * 0.2;
 		} else {
             playerScore1++ // Must be before ballReset()
             ballReset();	
@@ -166,7 +165,7 @@ function drawEverthing()
         if(playerScore1 >= WINNING_SCORE)
             {
                 ctx.fillStyle = 'black';
-                ctx.fillText("     You won Against my Bot Cheater",canvas.width/2,canvas.height/2);
+                ctx.fillText("     You won Against my Bot Cheater",340,100);
             }else if(computerScore >= WINNING_SCORE)
                         {
                             ctx.fillStyle = 'black';
