@@ -52,7 +52,7 @@ window.onload = function()
     ctx = canvas.getContext('2d');
 
     // Moves Every 30 Fps
-    let framsPerSecond = 30;
+    let framsPerSecond = 40;
     setInterval(function(){
         moveEverything();
         drawEverthing();
