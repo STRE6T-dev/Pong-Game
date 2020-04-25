@@ -3,8 +3,8 @@ let canvas;
 let ctx;
 let ballX = 50;
 let ballY = 50;
-let ballSpeedX = 10;
-let ballSpeedY = 10;
+let ballSpeedX = 15;
+let ballSpeedY = 15;
 
 let playerScore1 = 0;
 let  computerScore = 0;
@@ -86,10 +86,10 @@ function computerMovement()
         let paddle2YCenter = paddle2Y + (PADDLE_HEIGHT/2);
         if(paddle2YCenter < ballY -15)
         {
-            paddle2Y += 20;
+            paddle2Y += 30;
         }else if(paddle2Y > ballY -15)
         {
-            paddle2Y -= 20;
+            paddle2Y -= 30;
         }
 
     }
@@ -111,7 +111,7 @@ function moveEverything()
             ballSpeedX = -ballSpeedX;
             
             let deltaY = ballY -(paddle1Y+PADDLE_HEIGHT/2);
-            ballSpeedY = deltaY * 0.3;
+            ballSpeedY = deltaY * 0.6;
         } else 
         {
             computerScore++;	
@@ -125,7 +125,7 @@ function moveEverything()
         {
             ballSpeedX = -ballSpeedX;
             let deltaY = ballY -(paddle2Y+PADDLE_HEIGHT/2);
-            ballSpeedY = deltaY * 0.3;
+            ballSpeedY = deltaY * 0.6;
 		} else {
             playerScore1++ // Must be before ballReset()
             ballReset();	
