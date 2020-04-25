@@ -182,10 +182,10 @@ function drawEverthing()
      drawNet();
 
     // Next lines draws the Left paddle
-    colorRect(0,paddle1Y, PADDLE_THICKNESS,PADDLE_HEIGHT + 5, 'blue');
+    colorRect(0,paddle1Y, PADDLE_THICKNESS,PADDLE_HEIGHT, 'blue');
 
     // Next line draws the Right paddle
-    colorRect(canvas.width-PADDLE_THICKNESS ,paddle2Y ,PADDLE_THICKNESS ,PADDLE_HEIGHT ,'blue');
+    colorRect(canvas.width-PADDLE_THICKNESS ,paddle2Y ,PADDLE_THICKNESS ,PADDLE_HEIGHT+10 ,'blue');
 
     // Next lines draws the ball
     drawCircle(ballX,ballY,10, 'red');
