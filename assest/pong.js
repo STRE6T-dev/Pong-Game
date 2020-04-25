@@ -3,8 +3,8 @@ let canvas;
 let ctx;
 let ballX = 50;
 let ballY = 50;
-let ballSpeedX = 15;
-let ballSpeedY = 15;
+let ballSpeedX = 20;
+let ballSpeedY = 20;
 
 let playerScore1 = 0;
 let  computerScore = 0;
