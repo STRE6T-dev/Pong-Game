@@ -3,12 +3,12 @@ let canvas;
 let ctx;
 let ballX = 50;
 let ballY = 50;
-let ballSpeedX = 15;
-let ballSpeedY = 15;
+let ballSpeedX = 10;
+let ballSpeedY = 10;
 
 let playerScore1 = 0;
 let  computerScore = 0;
-const WINNING_SCORE = 3;
+const WINNING_SCORE = 5;
 
 let showingWinScreen = false;
 
@@ -125,7 +125,7 @@ function moveEverything()
         {
             ballSpeedX = -ballSpeedX;
             let deltaY = ballY -(paddle2Y+PADDLE_HEIGHT/2);
-            ballSpeedY = deltaY * 0.6;
+            ballSpeedY = deltaY * 0.3;
 		} else {
             playerScore1++ // Must be before ballReset()
             ballReset();	
