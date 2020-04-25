@@ -84,10 +84,10 @@ function ballReset()
 function computerMovement()
     {
         let paddle2YCenter = paddle2Y + (PADDLE_HEIGHT/2);
-        if(paddle2YCenter < ballY -45)
+        if(paddle2YCenter < ballY -35)
         {
             paddle2Y += 30;
-        }else if(paddle2Y > ballY -45)
+        }else if(paddle2Y > ballY -35)
         {
             paddle2Y -= 30;
         }
@@ -111,7 +111,7 @@ function moveEverything()
             ballSpeedX = -ballSpeedX;
             
             let deltaY = ballY -(paddle1Y+PADDLE_HEIGHT/2);
-            ballSpeedY = deltaY * 0.6;
+            ballSpeedY = deltaY * 0.3;
         } else 
         {
             computerScore++;	
