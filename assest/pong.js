@@ -124,7 +124,7 @@ function moveEverything()
         {
             ballSpeedX = -ballSpeedX;
             let deltaY = ballY -(paddle2Y+PADDLE_HEIGHT/2);
-            ballSpeedY = deltaY * 0.2;
+            ballSpeedY = deltaY * 0.1;
 		} else {
             playerScore1++ // Must be before ballReset()
             ballReset();	
