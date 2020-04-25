@@ -119,7 +119,7 @@ function moveEverything()
 		}
     }
     
-    if(ballX >= canvas.width) {
+    if(ballX > canvas.width) {
 		if( (ballY > paddle2Y) && (ballY < paddle2Y+PADDLE_HEIGHT)) 
         {
             ballSpeedX = -ballSpeedX;
@@ -132,12 +132,12 @@ function moveEverything()
 		}
 	}
 
-    if(ballY >= canvas.height)
+    if(ballY > canvas.height)
     {
         ballSpeedY = -ballSpeedY;
     }
 
-    if(ballY <= 0)
+    if(ballY < 0)
     {
         ballSpeedY = -ballSpeedY;
     }
@@ -188,7 +188,7 @@ function drawEverthing()
     colorRect(canvas.width-PADDLE_THICKNESS ,paddle2Y ,PADDLE_THICKNESS ,PADDLE_HEIGHT+10 ,'blue');
 
     // Next lines draws the ball
-    drawCircle(ballX,ballY,10, 'red');
+    drawCircle(ballX,ballY,12, 'red');
 
     // Score
     ctx.fillStyle = 'black';
