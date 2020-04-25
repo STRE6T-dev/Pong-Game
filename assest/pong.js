@@ -3,8 +3,8 @@ let canvas;
 let ctx;
 let ballX = 50;
 let ballY = 50;
-let ballSpeedX = 10;
-let ballSpeedY = 10;
+let ballSpeedX = 5;
+let ballSpeedY = 5;
 
 let playerScore1 = 0;
 let  computerScore = 0;
@@ -14,7 +14,7 @@ let showingWinScreen = false;
 
 let paddle1Y = 250;
 let paddle2Y = 250;
-const PADDLE_HEIGHT = 100;
+const PADDLE_HEIGHT = 140;
 const PADDLE_THICKNESS = 10;
 
 
@@ -84,12 +84,12 @@ function ballReset()
 function computerMovement()
     {
         let paddle2YCenter = paddle2Y + (PADDLE_HEIGHT/2);
-        if(paddle2YCenter < ballY -35)
+        if(paddle2YCenter < ballY -15)
         {
-            paddle2Y += 30;
-        }else if(paddle2Y > ballY -35)
+            paddle2Y += 20;
+        }else if(paddle2Y > ballY -15)
         {
-            paddle2Y -= 30;
+            paddle2Y -= 20;
         }
 
     }
