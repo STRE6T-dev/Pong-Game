@@ -86,10 +86,10 @@ function computerMovement()
         let paddle2YCenter = paddle2Y + (PADDLE_HEIGHT/2);
         if(paddle2YCenter < ballY -100)
         {
-            paddle2Y += 60;
+            paddle2Y += 100;
         }else if(paddle2Y > ballY -100)
         {
-            paddle2Y -= 60;
+            paddle2Y -= 100;
         }
     }
 
