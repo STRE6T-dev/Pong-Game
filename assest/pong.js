@@ -188,7 +188,7 @@ function drawEverthing()
     colorRect(canvas.width-PADDLE_THICKNESS ,paddle2Y ,PADDLE_THICKNESS ,PADDLE_HEIGHT+10 ,'blue');
 
     // Next lines draws the ball
-    drawCircle(ballX,ballY,12, 'red');
+    drawCircle(ballX,ballY,10, 'red');
 
     // Score
     ctx.fillStyle = 'black';
