@@ -84,12 +84,12 @@ function ballReset()
 function computerMovement()
     {
         let paddle2YCenter = paddle2Y + (PADDLE_HEIGHT/2);
-        if(paddle2YCenter < ballY -100)
+        if(paddle2YCenter < ballY -35)
         {
-            paddle2Y += 100;
-        }else if(paddle2Y > ballY -100)
+            paddle2Y += 60;
+        }else if(paddle2Y > ballY -35)
         {
-            paddle2Y -= 100;
+            paddle2Y -= 60;
         }
     }
 
