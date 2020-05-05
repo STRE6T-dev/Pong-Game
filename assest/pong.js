@@ -11,6 +11,7 @@ let  computerScore = 0;
 const WINNING_SCORE = 5;
 
 let showingWinScreen = false;
+let playGame = false
 
 let paddle1Y = 250;
 let paddle2Y = 250;
@@ -42,9 +43,11 @@ function handleMouseClick(evt)
         }
     }
 
+    
 
 
-window.onload = function()
+
+window.onload = function playGame()
 {
 
     
@@ -96,11 +99,13 @@ function computerMovement()
 
 function moveEverything()
 {
+    //Pause
     if(showingWinScreen)
     {
         return;
     }
-    computerMovement();    
+    computerMovement();
+    
     ballX += ballSpeedX;
     ballY += ballSpeedY;
 
@@ -118,14 +123,21 @@ function moveEverything()
             
 		}
     }
+
+    
     
     if(ballX > canvas.width) {
+    // The Next lines says if the ball hits the paddle and if it's smaller or equal to the  paddle height then 
 		if( (ballY => paddle2Y) && (ballY <= paddle2Y+PADDLE_HEIGHT)) 
         {
+            // This code says the ball should go in reverse
             ballSpeedX = -ballSpeedX;
+            // This code says if the ball hits the conor of the paddle then it must bounch at a diagonal direction
             let deltaY = ballY -(paddle2Y+PADDLE_HEIGHT/2);
+            // This code will be how fast the ball moves after it hits the conor of the paddle
             ballSpeedY = deltaY * 0.1;
 		} else {
+            // Add a score to the human player on if the ball goes past the Ai 
             playerScore1++ // Must be before ballReset()
             ballReset();	
             ;
@@ -160,6 +172,7 @@ function drawEverthing()
     // Next lines makes the canvas
     colorRect(0,0,canvas.width,canvas.height,'green');
 
+    // Restart Menu
     if(showingWinScreen)
     {
         if(playerScore1 >= WINNING_SCORE)
